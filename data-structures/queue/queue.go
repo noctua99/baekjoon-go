@@ -12,7 +12,7 @@ func (q *Queue[T]) Push(value T) {
 
 func (q *Queue[T]) Pop() T {
 	if len(*q) == 0 {
-		panic("queue: PopFront() called on empty queue")
+		panic("queue: Pop() called on empty queue")
 	}
 	v := (*q)[0]
 	*q = (*q)[1:]
@@ -29,7 +29,7 @@ func (q *Queue[T]) Empty() bool {
 
 func (q *Queue[T]) Peek() T {
 	if len(*q) == 0 {
-		panic("queue: PopFront() called on empty queue")
+		panic("queue: Peek() called on empty queue")
 	}
 	return (*q)[0]
 }

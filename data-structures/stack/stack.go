@@ -12,7 +12,7 @@ func (s *Stack[T]) Push(value T) {
 
 func (s *Stack[T]) Pop() T {
 	if len(*s) == 0 {
-		panic("queue: PopFront() called on empty queue")
+		panic("queue: Pop() called on empty queue")
 	}
 	v := (*s)[len(*s)-1]
 	*s = (*s)[:len(*s)-1]
@@ -29,7 +29,7 @@ func (s *Stack[T]) Empty() bool {
 
 func (s *Stack[T]) Peek() T {
 	if len(*s) == 0 {
-		panic("queue: PopFront() called on empty queue")
+		panic("queue: Peek() called on empty queue")
 	}
 	return (*s)[len(*s)-1]
 }

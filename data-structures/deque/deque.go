@@ -25,7 +25,7 @@ func (d *Deque[T]) PopFront() T {
 
 func (d *Deque[T]) PopBack() T {
 	if len(*d) == 0 {
-		panic("queue: PopFront() called on empty queue")
+		panic("queue: PopBack() called on empty queue")
 	}
 	v := (*d)[len(*d)-1]
 	*d = (*d)[:len(*d)-1]
@@ -42,14 +42,14 @@ func (d *Deque[T]) Empty() bool {
 
 func (d *Deque[T]) Front() T {
 	if len(*d) == 0 {
-		panic("queue: PopFront() called on empty queue")
+		panic("queue: Front() called on empty queue")
 	}
 	return (*d)[0]
 }
 
 func (d *Deque[T]) Back() T {
 	if len(*d) == 0 {
-		panic("queue: PopFront() called on empty queue")
+		panic("queue: Back() called on empty queue")
 	}
 	return (*d)[len(*d)-1]
 }
