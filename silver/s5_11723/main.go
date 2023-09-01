@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"fmt"
 	"os"
 	"strconv"
 )
@@ -40,10 +39,11 @@ func main() {
 			set[nextInt()] = false
 		case "check":
 			if set[nextInt()] {
-				fmt.Fprintln(w, 1)
+				w.WriteByte('1')
 			} else {
-				fmt.Fprintln(w, 0)
+				w.WriteByte('0')
 			}
+			w.WriteByte('\n')
 		case "toggle":
 			x := nextInt()
 			set[x] = !set[x]
